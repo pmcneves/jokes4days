@@ -1,0 +1,10 @@
+@use '../styles/colors' as col;
+
+.container {
+  height: 100%;
+  background-color: col.$background;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
