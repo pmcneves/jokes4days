@@ -1,4 +1,4 @@
-import { call, put, takeLatest } from '@redux-saga/core/effects';
+import { call, takeLatest } from '@redux-saga/core/effects';
 import { SagaIterator } from '@redux-saga/types';
 import { CategoriesTypes } from '../actions/jokesActions';
 

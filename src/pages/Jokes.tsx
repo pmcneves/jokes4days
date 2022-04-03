@@ -7,6 +7,7 @@ export default function Jokes() {
 
   useEffect(() => {
     dispatch(setJoke());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return <div>Jokes</div>;
