@@ -1,0 +1,14 @@
+@use '../styles/colors' as col;
+
+.item {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: col.$porcelain_70;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.active {
+  color: col.$porcelain;
+}
