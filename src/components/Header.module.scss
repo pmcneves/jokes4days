@@ -6,7 +6,7 @@ header {
   display: flex;
   justify-content: center;
   background-color: col.$primary;
-  color: col.$porcelain;
+  color: col.$porcelain_70;
   padding: 10px 15px;
   @include mixin.window-width(sm) {
     justify-content: space-between;
@@ -19,16 +19,5 @@ header {
   font-size: 1.5rem;
   @include mixin.window-width(sm) {
     display: block;
-  }
-}
-
-nav {
-  font-size: 1.2rem;
-  a {
-    text-decoration: none;
-    color: inherit;
-    &:not(:last-child) {
-      margin-right: 10px;
-    }
   }
 }

@@ -1,10 +1,10 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import "./styles/index.scss";
-import reportWebVitals from "./reportWebVitals";
-import AppRouter from "./routes/AppRouter";
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import reportWebVitals from './reportWebVitals';
+import AppRouter from './routes/AppRouter';
+import './styles/index.scss';
 
-const container = document.getElementById("root") as HTMLElement;
+const container = document.getElementById('root') as HTMLElement;
 const root = createRoot(container);
 
 root.render(

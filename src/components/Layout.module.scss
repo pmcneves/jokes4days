@@ -21,6 +21,7 @@ main {
   text-align: center;
   font-family: typo.$brand;
   font-size: 2rem;
+
   @include mixin.window-width(sm) {
     display: none;
   }
