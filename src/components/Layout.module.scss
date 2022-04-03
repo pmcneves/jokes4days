@@ -1,10 +1,34 @@
 @use '../styles/colors' as col;
+@use '../styles/mixins' as mixin;
+@use '../styles/typography' as typo;
+
+main {
+  padding: 0 8px;
+  background-color: col.$background;
+  height: 100%;
+
+  @include mixin.window-width(sm) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px;
+  }
+}
+
+.brand {
+  padding: 48px 0;
+  text-align: center;
+  font-family: typo.$brand;
+  font-size: 2rem;
+  @include mixin.window-width(sm) {
+    display: none;
+  }
+}
 
 .container {
-  height: 100%;
-  background-color: col.$background;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  border: 2px solid col.$primary;
+  border-radius: 0.625rem;
+  width: min(100%, 900px);
+  overflow: hidden;
 }
