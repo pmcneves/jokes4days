@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { NavLink, useResolvedPath, useMatch } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styles from './Nav.module.scss';
 
 export default function Nav() {
