@@ -31,3 +31,7 @@ export const jokesReducer = (state = initialState, action: SetJokeActions): SetJ
       return state;
   }
 };
+
+export const getJoke = (state: SetJokeReducer) => state.joke;
+export const getJokeLoading = (state: SetJokeReducer) => state.loading;
+export const getJokeError = (state: SetJokeReducer) => state.error;

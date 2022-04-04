@@ -1,17 +1,14 @@
-import { call, takeLatest } from '@redux-saga/core/effects';
+import { call, takeLatest, put } from '@redux-saga/core/effects';
 import { SagaIterator } from '@redux-saga/types';
-import { CategoriesTypes } from '../actions/jokesActions';
+import jokeServices from '../../core/services/jokeServices';
+import { CategoriesTypes, setJokeFailure, setJokeSuccess } from '../actions/jokesActions';
 
 function* getJoke(): SagaIterator {
   try {
-    const res = yield call(() =>
-      fetch('https://v2.jokeapi.dev/joke/Any')
-        .then((response) => response.json())
-        .then((myJson) => myJson)
-    );
-    console.log(res);
-  } catch (e) {
-    console.log(e);
+    const res = yield call(jokeServices.getNewJoke);
+    yield put(setJokeSuccess(res));
+  } catch (e: any) {
+    yield put(setJokeFailure({ message: e.message, status: e.status }));
   }
 }
 
